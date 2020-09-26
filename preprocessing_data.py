@@ -8,7 +8,6 @@ def processor_data(train, test):
     train_columns = ['Gender',
                      'Age',
                      'Driving_License',
-                    # 'Region_Code',
                      'Previously_Insured',
                      'Vehicle_Age',
                      'Vehicle_Damage',
@@ -19,13 +18,14 @@ def processor_data(train, test):
     x_train = train[train_columns]
     # Or
     # x_train = train.iloc[:, :11]
+    
+    x_test = test[train_columns]
         
     y_train = train['Response']
         
     # Preprocessing
     columns_need_dummy = ['Gender',
                           'Driving_License',
-                       #   'Region_Code',
                           'Previously_Insured',
                           'Vehicle_Damage',
                           'Vehicle_Age'
@@ -37,7 +37,7 @@ def processor_data(train, test):
         columns = columns_need_dummy)
         
     x_test = pd.get_dummies(
-        test,
+        x_test,
         columns = columns_need_dummy)
         
         
