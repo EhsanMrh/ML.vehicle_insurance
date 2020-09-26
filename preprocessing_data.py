@@ -8,7 +8,7 @@ def processor_data(train, test):
     train_columns = ['Gender',
                      'Age',
                      'Driving_License',
-                     'Region_Code',
+                    # 'Region_Code',
                      'Previously_Insured',
                      'Vehicle_Age',
                      'Vehicle_Damage',
@@ -25,7 +25,7 @@ def processor_data(train, test):
     # Preprocessing
     columns_need_dummy = ['Gender',
                           'Driving_License',
-                          'Region_Code',
+                       #   'Region_Code',
                           'Previously_Insured',
                           'Vehicle_Damage',
                           'Vehicle_Age'
